@@ -1,47 +1,83 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+<head>
+
+    <meta name="viewport" content="user-scalable=yes, width=device-width, initial-scale=1.0" />
     <meta charset="utf-8">
-    <title>Park My Bike!</title>
+    <title>2 Park My Bike!</title>
     <link rel="stylesheet" type="text/css" href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css"/>
-    <link rel="stylesheet" type="text/css" href="/css/bike-parking.css">
+    <link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="/css/bike-parking2.css">
 
-	<script src="//code.jquery.com/jquery-latest.min.js"></script>
-      <script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
 
-    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=true&libraries=places"></script>
-    <script src="/js/bikeParking.js"></script>
-  </head>
-  <body>
 
-    <div class="content">
-        <img src="/images/bikeParked_clipped.png" class="logo"><h2 class="pageHeading">Park My Bike!</h2>
 
-        <div id="panel">
-            <form name="inputForm" class="inputForm">
+</head>
+<body>
+
+<div class="container">
+
+    <h1 class="homeLink"><a href="#"><img src="/images/bikeParked_clipped.png" class="logo">Park My Bike!</a></h1>
+    <div class="row">
+        <form name="inputForm" class="inputForm">
+
+            <div class="inputElement">
                 <input type="radio" class="inputLocation" name="inputLocation" id="current" value="currentLocation">
-                <label for="current">From Current Location <span class="smallFont">(Requires enabling geolocation detection in browsers)</span></label>
-                <br>
+                <label for="current">From Current Location</label>
+                <div class="smallFont">(Requires enabling geolocation detection in browsers)</div>
+            </div>
+            <div class="inputElement">
                 <input type="radio" class="inputLocation" name="inputLocation" id="address" value="address">
                 <label for="address">From an Address</label><br>
                 <div id="address-selection" style="display:none">
                     <input id="pac-input" class="controls" type="text" placeholder="Enter a location">
-                    <input type="submit" class="search" value="Search"/>
+                    <input type="submit" class=" btn btn-success search" value="Search"/>
                 </div>
-            </form>
-
-
-        </div>
-        <div class="result"></div>
-        <div id="map-canvas" class="map-canvas-width-full"></div>
-        <div id="directions-panel" class="directions-panel-width"></div>
-
-        <div id="dialog-message" title="Warning!" class="hide"></div>
-        <div id="dialog-loading" class="hide">
-            <strong>Searching ...</strong><img src="images/cycle.gif">
-        </div>
+            </div>
+        </form>
 
     </div>
-  </body>
+
+    <div class="row">
+        <div class="span12">
+            <div class="result"></div>
+            <div id="map-canvas" class="map-canvas-width-full" ></div>
+
+        </div>
+
+        <div id="dialog-message"  class="modal">
+            <div class="modal-dialog">
+                <span class="modal-content">
+
+                </span>
+            </div>
+        </div>
+
+        <div class="hide">
+            <div id="dialog-loading" class="modal">
+                <div class="modal-dialog">
+                        <span class="modal-content">
+                            <strong>Searching ...</strong><img src="images/cycle.gif">
+                        </span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-3">&nbsp;</div>
+        <div class="col-md-6 col-xs-8">
+            <div id="directions-panel" class="directions-panel-width"></div>
+        </div>
+        <div class="col-md-3">&nbsp;</div>
+    </div>
+</div>
+
+<script src="//code.jquery.com/jquery-latest.min.js"></script>
+<script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=true&libraries=places"></script>
+
+<script src="/js/bikeParking2.js"></script>
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+</body>
 </html>

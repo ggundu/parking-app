@@ -125,9 +125,9 @@ function calcRoute(fromCoordinates, toCoordinates) {
 
 
 function searchAndNavigateToClosest(fromCoordinates) {
-   /*
-    1. Input Coordinates acts a Starting Points.
-    2. Make a server request to fetch closest Parking Locations.
+    /*
+     1. Input Coordinates acts a Starting Points.
+     2. Make a server request to fetch closest Parking Locations.
 
      */
     // loadingDialog.open();
@@ -147,7 +147,7 @@ function fetchParkingLocations(fromCoordinates) {
 
     var errorTimeout = setTimeout(function() {
         $("#dialog-loading").dialog("close");
-       showDialog("Oops...Sorry! Something is wrong with our server or the request.");
+        showDialog("Oops...Sorry! Something is wrong with our server or the request.");
     }, 10000);
 
     $.getJSON("/closestBikeLocations", reqData, function (data) {
@@ -171,7 +171,7 @@ function fetchParkingLocations(fromCoordinates) {
 
             calcRoute(fromCoordinates, theClosestLocation.coordinates);
             displayMarkers();
-            $(".result").html('We Found '+ allClosestLocationsArray.length+'\ closest locations for you\! <span class=\"smallFont\"\>(Note: Please pan or zoom-out the map if you don\'t see them all)</span>');
+            $(".result").html('We Found '+ allClosestLocationsArray.length+'\ closest locations for you\!<div> Please scroll down for directions </div> <span class=\"smallFont\"\>(Note: Please pan or zoom-out the map if you don\'t see them all)</span>');
 
 
         }else {
@@ -199,9 +199,11 @@ function calcRouteWithAddress() {
 }
 
 function showDialog(message) {
-    $('#dialog-message').html('<strong>'+message+'</strong>');
+    $("#dialog-message .modal-content").html('<strong>'+message+'</strong>');
     $('.result').html('');
+
     $("#dialog-message").dialog({
+        dialogClass:"no-close",
         modal:true,
         hide: { effect: "explode", duration: 500 },
         buttons: {
