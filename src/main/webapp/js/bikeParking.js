@@ -150,7 +150,7 @@ function fetchParkingLocations(fromCoordinates) {
         showDialog("Oops...Sorry! Something is wrong with our server or the request.");
     }, 10000);
 
-    $.getJSON("/closestBikeLocations", reqData, function (data) {
+    $.getJSON("closestBikeLocations", reqData, function (data) {
         debug(data.length);
         clearTimeout(errorTimeout);
         $("#dialog-loading").dialog("close");
