@@ -19,27 +19,27 @@
 
     <h1 class="homeLink"><a href="#"><img src="/images/bikeParked_clipped.png" class="logo">Park My Bike!</a></h1>
     <div class="row">
-        <form name="inputForm" class="inputForm">
+            <form name="inputForm" class="inputForm">
 
-            <div class="inputElement">
-                <input type="radio" class="inputLocation" name="inputLocation" id="current" value="currentLocation">
-                <label for="current">From Current Location</label>
-                <div class="smallFont">(Requires enabling geolocation detection in browsers)</div>
-            </div>
-            <div class="inputElement">
-                <input type="radio" class="inputLocation" name="inputLocation" id="address" value="address">
-                <label for="address">From an Address</label><br>
-                <div id="address-selection" style="display:none">
-                    <input id="pac-input" class="controls" type="text" placeholder="Enter a location">
-                    <input type="submit" class=" btn btn-success search" value="Search"/>
+                <div class="inputElement">
+                    <input type="radio" class="inputLocation" name="inputLocation" id="current" value="currentLocation">
+                    <label for="current">From Current Location</label>
+                    <div class="smallFont">(Requires enabling geolocation detection in browsers)</div>
                 </div>
-            </div>
-        </form>
+                <div class="inputElement">
+                    <input type="radio" class="inputLocation" name="inputLocation" id="address" value="address">
+                    <label for="address">From an Address</label><br>
+                    <div id="address-selection" style="display:none">
+                        <input id="pac-input" class="controls" type="text" placeholder="Enter a location" size="30px">
+                        <input type="submit" class=" btn btn-success search" value="Search"/>
+                    </div>
+                </div>
+            </form>
 
     </div>
 
     <div class="row">
-        <div class="span12">
+        <div class="span8 col-xs-12">
             <div class="result"></div>
             <div id="map-canvas" class="map-canvas-width-full" ></div>
 
@@ -65,11 +65,11 @@
     </div>
 
     <div class="row">
-        <div class="col-md-3">&nbsp;</div>
-        <div class="col-md-6 col-xs-8">
+        <div class="col-md-2 col-xs-3">&nbsp;</div>
+        <div class="col-md-8 col-xs-12">
             <div id="directions-panel" class="directions-panel-width"></div>
         </div>
-        <div class="col-md-3">&nbsp;</div>
+        <div class="col-md-2 col-xs-3">&nbsp;</div>
     </div>
 </div>
 

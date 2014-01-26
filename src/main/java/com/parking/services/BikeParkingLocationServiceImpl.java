@@ -40,7 +40,8 @@ public class BikeParkingLocationServiceImpl implements
         List<BikeParkingLocation> locationList = getBikeParkingLocationsWithinRadius(coordinates, 1);
         if(locationList == null || locationList.isEmpty()) {
             locationList = getBikeParkingLocationsWithinRadius(coordinates, 2);
-        }else {
+        }
+        if(locationList != null && !locationList.isEmpty()) {
             locationList = processDistanceFromOrigin(coordinates, locationList, noOfLocationsToReturn);
         }
 
