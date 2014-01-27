@@ -78,7 +78,8 @@ function addMarker(parkingLocation) {
         infowindow.setContent(contentString);
         infowindow.open(map,marker);
         $("div.markerInfo").parent().css("white-space","nowrap");
-        $("div.markerInfo a.pickMarker").click(function() {
+        $("div.markerInfo a.pickMarker").click(function(event) {
+            event.preventDefault();
             calcRoute(fromCoordinates, parkingLocation.coordinates);
         });
     });
