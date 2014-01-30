@@ -5,8 +5,10 @@ Application Description
 -----------------------
 This application, parking-app (Park-My-Bike!), is a java based single page application used to find the closest
 bike parking locations either from the current location of the User or by input Address. 
-Bike Parking Location data is being supplied from https://data.sfgov.org using Socrata API and for now the data is limited to 
-SF city only.
+Bike Parking Location data is being supplied from https://data.sfgov.org using Socrata API and for now the data is limited to SF city only.
+
+Upon user selecting one of the options (current location or input address), the UI makes a backend call and requests for 10 closest locations within 1 or 3 miles radius. (this number is configurable at the backend).
+
 Once the results are displayed, by default the application shows the closest parking location Bike Directions but the user can
 select any other displayed location and get the directions to the selected location respectively.
 
