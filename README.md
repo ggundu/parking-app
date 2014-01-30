@@ -19,8 +19,8 @@ the API integration and the Query language for the SODA API.
 
 Developer Info
 ----------------
-Name: Goutham Nath
-Title: Lead Software Engineer
+Goutham
+
 
 As part of this development i have explored and learned quite some frameworks including Spark, Python Flask, Html5, Bootstrap, 
 Backbone.js, Socrata API, JoSQL, Google Maps & Directions Service integration.
