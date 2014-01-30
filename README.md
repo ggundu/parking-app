@@ -11,6 +11,7 @@ Once the results are displayed, by default the application shows the closest par
 select any other displayed location and get the directions to the selected location respectively.
 
 UI Frameworks/Technologies Used: Html5, CSS3, Bootstrap, jQuery, Google Geo Location services, Google Maps, Google direction service.
+
 Backend: Java, Spark framework, Socrata/SODA API, Maven build
 
 Interesting pieces in the application are location resolution and the coordinate math to determine the location coordinates to search and
