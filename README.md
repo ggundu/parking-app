@@ -16,6 +16,9 @@ Backend: Java, Spark framework, Socrata/SODA API, Maven build
 Interesting pieces in the application are location resolution and the coordinate math to determine the location coordinates to search and
 the API integration and the Query language for the SODA API.
 
+Note: This application depends on the Web Services (API calls ) exposed at https://data.sfgov.org. This is the current real time dependency which could sometimes (potentially) cause some lag in the response time and there by not able to present the good customer experience (Instead of showing the closest parking locations, you might see an error message saying we could not retrieve results). 
+This is one of the areas where the application needs improvement as to move away from realtime dependency on the API but rather load (via scheduled job) the parking locations into local mongodb and query mongodb instantly as the customer searches. This will avoid a out-network call and could be faster too. 
+
 
 Developer Info
 ----------------
