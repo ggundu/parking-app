@@ -21,7 +21,7 @@ the API integration and the Query language for the SODA API.
 
 Note: This application depends on the Web Services (API calls ) exposed at https://data.sfgov.org. This is the current real time dependency which could sometimes (potentially) cause some lag in the response time and there by not able to present the good customer experience (Instead of showing the closest parking locations, you might see an error message saying we could not retrieve results). 
 
-This application currently has about 10 seconds as the timeout. If the response is not received within that limit, the UI will assume as backend error and display error dialog box to the user.  
+This application currently has about 20 seconds as the timeout. If the response is not received within that limit, the UI will assume as backend error and display error dialog box to the user.  
 
 This is one of the areas where the application needs improvement as to move away from realtime dependency on the API but rather load (via scheduled job) the parking locations into local mongodb and query mongodb instantly as the customer searches. This will avoid a out-network call and could be faster too. 
 
