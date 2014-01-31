@@ -149,7 +149,7 @@ function fetchParkingLocations(fromCoordinates) {
     var errorTimeout = setTimeout(function() {
         $("#dialog-loading").dialog("close");
         showDialog("Oops...Sorry! Something is wrong with our server or the request.");
-    }, 10000);
+    }, 20000);
 
     $.getJSON("closestBikeLocations", reqData, function (data) {
         debug(data.length);
